@@ -3,7 +3,11 @@ import requests
 from noct.schema import SLACK
 from noct.schema.attachment import Attachment, Action
 
-@click.command()
+@click.group()
+def cmd():
+	pass
+
+@cmd.command(name = 'slack')
 @click.argument('ok', type=click.Choice(['ok', 'error']))
 @click.argument('url', required=True)
 @click.argument('channel', required=True)
@@ -11,7 +15,7 @@ from noct.schema.attachment import Attachment, Action
 @click.argument('username', default = '')
 @click.argument('icon_emoji', default = ':grinning:')
 @click.option('--buttons', '-b', multiple=True)
-def cmd(ok, url, channel, title, username, icon_emoji, buttons):
+def slack_cmd(ok, url, channel, title, username, icon_emoji, buttons):
 	#
 	# SLACK 通知用 BASE JSON生成
 	#
