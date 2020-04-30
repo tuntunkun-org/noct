@@ -8,23 +8,33 @@ def cmd():
 	pass
 
 @cmd.command(name = 'slack')
-@click.argument('ok', type=click.Choice(['ok', 'error']))
 @click.argument('url', required=True)
 @click.argument('channel', required=True)
 @click.argument('title', default = '')
 @click.argument('username', default = '')
 @click.argument('icon_emoji', default = ':grinning:')
+@click.option('--alert', type=click.Choice(['default', 'success', 'warning', 'error']), default = 'default')
 @click.option('--buttons', multiple=True)
-def slack_cmd(ok, url, channel, title, username, icon_emoji, buttons):
+def slack_cmd(url, channel, title, username, icon_emoji, alert, buttons):
 	#
 	# SLACK 通知用 BASE JSON生成
 	#
 	slack = SLACK(channel=channel, username=username, icon_emoji=icon_emoji)
 
 	#
+	# 表示色の設定
+	#
+	color = None
+	if alert == 'success':
+		color = '#7ce87c'
+	if alert == 'warning':
+		color = '#f0ad4e'
+	if alert == 'error':
+		color = '#d9534f'
+
+	#
 	# SLACK Attachment の 作成
 	#
-	color = '#FF0000' if ok == 'error' else '#00FF00'
 	attachment = Attachment(title = title, color = color)
 
 	#
