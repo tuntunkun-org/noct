@@ -18,7 +18,7 @@ def cmd():
 @click.option('--buttons', multiple=True)
 def slack_cmd(url, channel, title, username, icon_emoji, alert, buttons):
 	if url is None:
-		raise click.BadOptionUsage('url', 'to pulish slack message, url option or SLACK_URL environment variable is required')
+		raise click.BadOptionUsage('url', 'to pulish slack message, url option or SLACK_WEBHOOK_URL environment variable is required')
 	#
 	# SLACK 通知用 BASE JSON生成
 	#
