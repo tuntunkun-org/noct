@@ -12,14 +12,14 @@ def cmd():
 @click.argument('url', required=True)
 @click.argument('channel', required=True)
 @click.argument('title', default = '')
-@click.argument('display_name', default = '')
+@click.argument('username', default = '')
 @click.argument('icon_emoji', default = ':grinning:')
-@click.option('--buttons', '-b', multiple=True)
-def slack_cmd(ok, url, channel, title, display_name, icon_emoji, buttons):
+@click.option('--buttons', multiple=True)
+def slack_cmd(ok, url, channel, title, username, icon_emoji, buttons):
 	#
 	# SLACK 通知用 BASE JSON生成
 	#
-	slack = SLACK(channel=channel, display_name=display_name, icon_emoji=icon_emoji)
+	slack = SLACK(channel=channel, username=username, icon_emoji=icon_emoji)
 
 	#
 	# SLACK Attachment の 作成
@@ -46,9 +46,7 @@ def slack_cmd(ok, url, channel, title, display_name, icon_emoji, buttons):
 	#
 	# リクエストの送信
 	#
-	print(json)
 	r = requests.post(url, json = json)
-	click.echo(r)
 
 if __name__ == '__main__':
 	cmd()
