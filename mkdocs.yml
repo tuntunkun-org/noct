@@ -1,0 +1,16 @@
+site_name: NOCT
+
+nav:
+- このサイトについて:
+  - はじめに: index.md
+  - インストール方法: index.md
+- SLACK:
+  - はじめに: slack/index.md
+
+docs_dir: docs
+theme:
+  name: 'material'
+  language: 'ja'
+  feature:
+    tabs: true
+
