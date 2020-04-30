@@ -12,6 +12,7 @@ pipfile = "*"
 e1839a8 = {editable = true,path = "."}
 mkdocs = "==1.0.4"
 mkdocs-material = "==4.6.0"
+pytest = "*"
 
 [requires]
 python_version = "3.7"
