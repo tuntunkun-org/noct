@@ -1,3 +1,4 @@
+import os
 import click
 import requests
 from noct.schema import SLACK
@@ -8,7 +9,7 @@ def cmd():
 	pass
 
 @cmd.command(name = 'slack')
-@click.argument('url', required=True)
+@click.option('--url', default=lambda: os.environ.get('SLACK_URL', None))
 @click.argument('channel', required=True)
 @click.argument('title', default = '')
 @click.argument('username', default = '')
@@ -16,6 +17,8 @@ def cmd():
 @click.option('--alert', type=click.Choice(['default', 'success', 'warning', 'error']), default = 'default')
 @click.option('--buttons', multiple=True)
 def slack_cmd(url, channel, title, username, icon_emoji, alert, buttons):
+	if url is None:
+		raise click.BadOptionUsage('url', 'to pulish slack message, url option or SLACK_URL environment variable is required')
 	#
 	# SLACK 通知用 BASE JSON生成
 	#
