@@ -27,13 +27,11 @@ def slack_cmd(url, channel, title, username, icon_emoji, alert, buttons):
 	#
 	# 表示色の設定
 	#
-	color = None
-	if alert == 'success':
-		color = '#7ce87c'
-	if alert == 'warning':
-		color = '#f0ad4e'
-	if alert == 'error':
-		color = '#d9534f'
+	color = {
+		'success': '#7ce87c',
+		'warning': '#f0ad4e',
+		'error': '#d9534f'
+	}.get(alert, None)
 
 	#
 	# SLACK Attachment の 作成
@@ -44,9 +42,10 @@ def slack_cmd(url, channel, title, username, icon_emoji, alert, buttons):
 	# SLACK Action の 作成
 	#
 	for button in buttons:
-		tmp = button.split(':', 1)
-		button_text = tmp[0]
-		button_url = tmp[1]
+		if not ':' in button:
+			raise click.BadOptionUsage('buttons', 'the button options require a URL followed by a colon after the button name')
+
+		(button_text, button_url) = button.split(':', 1)
 		action = Action(type = 'button', text = button_text, url = button_url)
 		attachment.addAction(**action.to_dict())
 
