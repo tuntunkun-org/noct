@@ -9,7 +9,7 @@ def cmd():
 	pass
 
 @cmd.command(name = 'slack')
-@click.option('--url', default=lambda: os.environ.get('SLACK_URL', None))
+@click.option('--url', default=lambda: os.environ.get('SLACK_WEBHOOK_URL', None))
 @click.argument('channel', required=True)
 @click.argument('title', default = '')
 @click.argument('username', default = '')
