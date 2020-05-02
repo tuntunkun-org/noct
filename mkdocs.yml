@@ -4,6 +4,7 @@ copyright: '&copy; Tuntunkun, All Rights Reserved,'
 nav:
 - このプロジェクトについて:
   - はじめに: index.md
+  - プロジェクトについて: common/project.md
 - SLACK:
   - はじめに: slack/index.md
 
