@@ -3,7 +3,25 @@
   グループチャットアプリケーションSlack（スラック）に対して通知を送る機能を利用する事が可能です。
 
 ## 事前準備
-- 「Incoming WebHooks」アプリの有効化
+### 「Incoming WebHooks」アプリの有効化
+  SLACKに対してメッセージを送信する前に、事前に[「Incoming WebHooks」](https://slack.com/apps/A0F7XDUAZ-incoming-webhooks)
+アプリを有効化する必要があります。
+
+#### アプリの有効化
+  SLACKの画面から、以下の手順通りに実施する事で、「Incoming WebHooks」アプリの有効化が可能です。
+
+![Incoming WebHooks の有効化](./images/enable_incoming_webhook_1.jpeg)
+
+- Slackアプリから、「Apps」をクリック
+- 検索ボックスに、「Incoming WebHooks」と入力
+- 「View in App Directory」をクリック
+- ブラウザが開いたページで「Add to Slack」ボタンをクリック
+
+#### 通知先のURLを取得する
+  「Incoming WebHooks」アプリの有効化後にリダイレクトされるWebページで、
+通知先のURLを確認する事が可能です。
+
+![通知先のURL確認](./images/slack_notification_url.png)
 
 ## SLACKにメッセージを送信する
   SLACKにメッセージを送信する際には、環境変数として渡す方法、オプションとして渡す方法があります。
