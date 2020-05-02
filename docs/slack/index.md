@@ -40,12 +40,12 @@ noct slack [CHANNEL] [TITLE] [USERNAME] [ICON_EMOJI] --url [SLACK 通知用URL]
 
 ![SLACKへの通知メッセージ送信](./images/slack_command_example.jpeg)
 
-|    | コマンド引数 | 説明                      |
-|----|--------------|---------------------------|
-|    | CHANNEL      | 送信するSLACKのチャネル名 |
-| ①  | TITLE        | タイトル名                |
-| ②  | USERNAME     | 表示名                    |
-| ③  | ICON_EMOJI   | アイコン                  |
+|    | コマンド引数 | 説明                                |
+|----|--------------|-------------------------------------|
+|    | CHANNEL      | 送信するSLACKのチャネル名           |
+| ①  | TITLE        | タイトル名                          |
+| ②  | USERNAME     | SLACK通知の表示名を変更します       |
+| ③  | ICON_EMOJI   | SLACK通知の表示アイコンを変更します |
 
 ### オプション
 #### URL付きボタンを送信する

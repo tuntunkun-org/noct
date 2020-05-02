@@ -1,8 +1,8 @@
 site_name: NOCT
-copyright: '&copy; Tuntunkun,ORG All Rights Reserved,'
+copyright: '&copy; Tuntunkun, All Rights Reserved,'
 
 nav:
-- このサイトについて:
+- このプロジェクトについて:
   - はじめに: index.md
 - SLACK:
   - はじめに: slack/index.md
