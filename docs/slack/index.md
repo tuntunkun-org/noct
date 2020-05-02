@@ -49,7 +49,14 @@ noct slack [CHANNEL] [TITLE] [USERNAME] [ICON_EMOJI] --url [SLACK 通知用URL]
 
 ### オプション
 #### URL付きボタンを送信する
-```bash
-noct slack [チャネル名] --buttons "メッセージ:URL(https://example.com/)"
+```bash tab="引数"
+noct slack [チャネル名] --buttons "メッセージ:ボタンを入力した際に遷移するURL" --url [SLACK 通知用URL]
 ```
+
+```bash tab="実行コマンドサンプル"
+noct slack [チャネル名] --buttons "メッセージ:https://example.com/" --url [SLACK 通知用URL]
+```
+
+#### 表示結果
+![URL付きのボタンを送信](./images/slack_single_button.png)
 
