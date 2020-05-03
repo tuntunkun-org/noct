@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 #
 setup(
 	name		= 'noct',
-	version		= '1.0.0',
+	version		= '0.1.1.1',
 	description	= 'Notification CLI Tool',
 	author		= 'tuntunkun.org',
 	author_email	= 'naoya@tuntunkun.com',
