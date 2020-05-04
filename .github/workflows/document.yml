@@ -3,6 +3,9 @@ name: Generate Document & Deploy to Github Pages
 on:
   push:
     branches: [ master ]
+  pull_request:
+    types: [ closed ]
+    branches: [ master ]
 
 jobs:
   build:
