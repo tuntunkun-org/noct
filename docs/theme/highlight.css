@@ -1,0 +1,12 @@
+.md-typeset div.codehilite>pre {
+    display: block;
+    margin: 0;
+    padding: .525rem 1.1764705882em;
+    overflow: auto;
+    word-break: normal;
+    box-shadow: none;
+    -webkit-box-decoration-break: slice;
+    box-decoration-break: slice;
+    touch-action: auto;
+}
+
