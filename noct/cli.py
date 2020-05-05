@@ -13,7 +13,7 @@ def cmd():
 @click.argument('channel', required=True)
 @click.argument('title', default = '')
 @click.argument('username', default = '')
-@click.argument('icon_emoji', default = ':grinning:')
+@click.argument('icon_emoji', default = '')
 @click.option('--alert', type=click.Choice(['default', 'success', 'warning', 'error']), default = 'default')
 @click.option('--buttons', multiple=True)
 def slack_cmd(url, channel, title, username, icon_emoji, alert, buttons):

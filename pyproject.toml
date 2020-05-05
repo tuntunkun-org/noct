@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "noct"
-version = "0.1.3"
+version = "0.1.4"
 description = "Command Line Notification Tool"
 readme = "README.md"
 authors = ["Naoya Sawada <naoya@tuntunkun.com>"]
