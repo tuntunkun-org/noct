@@ -4,5 +4,5 @@
 
 # ドキュメント
 　以下のページから利用方法について確認を行う事が可能です。
-- https://github.io/tuntunkun-org/noct
+- https://tuntunkun-org.github.io/noct/
 
