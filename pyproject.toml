@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "noct"
-version = "0.1.3"
+version = "0.1.5"
 description = "Command Line Notification Tool"
 readme = "README.md"
 authors = ["Naoya Sawada <naoya@tuntunkun.com>"]
 license = "Apache License 2.0"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 click = "^7.1.2"
 requests = "^2.23.0"
 
@@ -15,6 +15,7 @@ requests = "^2.23.0"
 noct = "noct.cli:cmd"
 
 [tool.poetry.dev-dependencies]
+mock = "^4.0.2"
 
 [build-system]
 requires = ["poetry>=0.12"]
