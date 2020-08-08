@@ -14,5 +14,5 @@ RUN poetry install --no-root
 ADD . .
 RUN poetry install
 
-CMD ["noct"]
+CMD ["bash"]
 
