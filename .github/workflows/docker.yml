@@ -1,0 +1,14 @@
+name: Docker image build & upload
+
+on: push
+
+
+jobs:
+  build:
+    runs-on: docker
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Docker build
+      run: docker build -t noct .
+
