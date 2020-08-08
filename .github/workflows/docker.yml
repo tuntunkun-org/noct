@@ -1,11 +1,10 @@
-name: Docker image build & upload
+name: Build & upload Docker image
 
 on: push
 
-
 jobs:
   build:
-    runs-on: docker
+    runs-on: docker:19.03.12
     steps:
     - uses: actions/checkout@v2
 
